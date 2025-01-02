@@ -51,3 +51,25 @@ async def read_item(item_id: str, q: str | None = None):
 # Also notice that FastAPI is smart enough to notice that the path parameter item_id is a path parameter 
 # and q is not, so, it's a query parameter.
 
+#Query Parameter: Type conversion
+#You can declare bool type and they will be converted
+@app.get("/books/{book_id}")
+async def read_book(book_id: str, q: str | None = None, short: bool = False):
+    """read a book"""
+    book = {"book_id": book_id}
+    if q:
+        book.update({"q": q})
+    if not short:
+        book.update({
+            "description": "This is a good book with a long description"
+        })
+    return book
+
+#in this case if you go to:
+#http://127.0.0.1:8000/items/foo?short=1 or
+#http://127.0.0.1:8000/items/foo?short=True or 
+#http://127.0.0.1:8000/items/foo?short=true or 
+#http://127.0.0.1:8000/items/foo?short=on or
+# # http://127.0.0.1:8000/items/foo?short=yes
+# or any other case variation (uppercase, first letter in uppercase, etc),
+# your function will see the parameter short with a bool value of True. Otherwise as False.
