@@ -73,3 +73,20 @@ async def read_book(book_id: str, q: str | None = None, short: bool = False):
 # # http://127.0.0.1:8000/items/foo?short=yes
 # or any other case variation (uppercase, first letter in uppercase, etc),
 # your function will see the parameter short with a bool value of True. Otherwise as False.
+
+#Multiple path and query parameters.
+#You can declare multiple path and query parameters at the same time
+#FastAPI will know which one is path or query parameter.
+#You don't have to declare them in a specific order or anything.
+#FastAPI will detect it by name.
+@app.get("/users/{user_id}/items/{item_id}")
+async def read_user_item(user_id: int, item_id: str, q: str | None = None, short: bool = False):
+    """Endpoint with multiple path and query parameters"""
+    item = {"item_id": item_id, "owner_id": user_id}
+    if q:
+        item.update({"q": q})
+    if not short:
+        item.update({"description": "This is an amazing item that has a long description"})
+    return item
+
+#Required query parameters
