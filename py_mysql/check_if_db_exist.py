@@ -7,7 +7,7 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
-mycursor.execute("SHOW DATABASE")
+mycursor.execute("SHOW DATABASES")
 
 for db in mycursor:
     print(db)
