@@ -6,4 +6,8 @@ mydb = mysql.connector.connect(
     password="Sup@dm1n"
 )
 
-print(mydb)
+mycursor = mydb.cursor()
+mycursor.execute("SHOW DATABASE")
+
+for db in mycursor:
+    print(db)
