@@ -1,8 +1,8 @@
 import pymongo
 
-myclient = pymongo.MongoClient('mongodb://localhost:27017/')
-mydb = myclient['mydatabase']
-mycol = mydb["customers"]
+client = pymongo.MongoClient('mongodb://localhost:27017/')
+db = client['mydatabase']
+mycol = db["customers"]
 
 mydict = { "name": "John", "address": "Highway 37" }
 
