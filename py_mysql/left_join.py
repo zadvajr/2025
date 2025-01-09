@@ -2,8 +2,8 @@ import mysql.connector
 
 mydb = mysql.connector.connect(
   host="localhost",
-  user="myusername",
-  password="mypassword",
+  user="root",
+  password="Sup@dm1n",
   database="mydatabase"
 )
 
@@ -21,3 +21,4 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
   print(x)
+
