@@ -12,6 +12,9 @@ mycol = db["customers"]
 
 print(db.list_collection_names())
 
+# Or you can check a specific collection by name:
+# Example
+# Check if the "customers" collection exists:
 collist = db.list_collection_names()
 if "customers" in collist:
   print("The collection exists.")
