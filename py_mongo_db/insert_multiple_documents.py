@@ -27,3 +27,6 @@ mylist = mylist = [
 x = mycol.insert_many(mylist)
 
 print(x)
+
+# The insert_many() method returns a InsertManyResult object
+# which has a property, inserted_ids, that holds the ids of the inserted documents.
