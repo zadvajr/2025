@@ -10,8 +10,9 @@ client = pymongo.MongoClient('mongodb://localhost:27017/')
 db = client['mydatabase']
 mycol = db["customers"]
 
-mydict = { "name": "John", "address": "Highway 37" }
+mydict = { "_id": 31, "name": "Mary", "address": "Abeokuta 9" }
 
 inserted_data = mycol.insert_one(mydict)
 
 print(inserted_data)
+print(inserted_data.inserted_id)

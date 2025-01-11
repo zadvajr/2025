@@ -13,3 +13,7 @@ print(client.list_database_names())
 dblist = client.list_database_names()
 if "mydatabase" in dblist:
   print("The database exists.")
+
+#you can loop through the list of databases
+for x in dblist:
+  print(x)
