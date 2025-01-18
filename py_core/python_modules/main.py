@@ -25,3 +25,7 @@ mymodule.greeting("Jonathan")
 # Variables in Module
 # The module can contain functions, as already described, 
 # but also variables of all types (arrays, dictionaries, objects etc):
+# Example
+# Import the module named mymodule, and access the person1 dictionary:
+age = mymodule.person1['age']
+print(age)
