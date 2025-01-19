@@ -1,4 +1,4 @@
-#Request Body
+"""Request body"""
 from pydantic import BaseModel
 from fastapi import FastAPI
 
@@ -15,4 +15,3 @@ class Item(BaseModel):
 async def create_item(item: Item):
     """create item"""
     return item
-
