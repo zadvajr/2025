@@ -17,3 +17,10 @@ print(get_full_name("daniel", "zadva Jnr"))
 # Takes a first_name and last_name.
 # Converts the first letter of each one to upper case with title().
 # Concatenates them with a space in the middle.
+
+#With Type Hints
+def get_fullname(firstname: str, lastname: str) -> str:
+    fullname = firstname.title() + " " + lastname.title()
+    return fullname
+
+print(get_fullname("dan", "zadva"))
