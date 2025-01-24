@@ -12,7 +12,9 @@ async def read_items(q: str | None = None):
     if q:
         results.update({"q": q})
     return results
-
-# The query parameter q is of type Union[str, None] (or str | None in Python 3.10), 
-# that means that it's of type str but could also be None, and indeed, 
+# The query parameter q is of type Union[str, None] (or str | None in Python 3.10),
+# that means that it's of type str but could also be None, and indeed,
 # the default value is None, so FastAPI will know it's not required.
+
+# FastAPI will know that the value of q is not required because of the default value = None.
+# The Union in Union[str, None] will allow your editor to give you better support and detect errors.
