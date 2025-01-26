@@ -1,5 +1,8 @@
-from typing import Annotated
+"""Required with Ellipsis (...)"""
+# There's an alternative way to explicitly declare that a value is required.
+# You can set the default to the literal value ...:
 
+from typing import Annotated
 from fastapi import FastAPI, Query
 
 app = FastAPI()
