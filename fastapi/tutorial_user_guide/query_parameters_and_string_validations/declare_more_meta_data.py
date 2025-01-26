@@ -1,4 +1,7 @@
-"""Declare more mteta data"""
+"""Declare more metadata"""
+# You can add more information about the parameter.
+# That information will be included in the generated OpenAPI and
+# used by the documentation user interfaces and external tools.
 from typing import Annotated
 
 from fastapi import FastAPI, Query
