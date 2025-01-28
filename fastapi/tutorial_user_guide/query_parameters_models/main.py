@@ -1,5 +1,12 @@
-from typing import Annotated, Literal
+"""Query Parameter Models"""
+# If you have a group of query parameters that are related, you can create a Pydantic model to declare them.
+# This would allow you to re-use the model in multiple places and also to declare validations
+# and metadata for all the parameters at once.
 
+# Query Parameters with a Pydantic Model
+# Declare the query parameters that you need in a Pydantic model, and then declare the parameter as Query:
+
+from typing import Annotated, Literal
 from fastapi import FastAPI, Query
 from pydantic import BaseModel, Field
 
