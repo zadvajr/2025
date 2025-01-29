@@ -19,7 +19,7 @@ class Item(BaseModel):
     price: float
     tax: float | None = None
 
-@app.get("/items/{item_id}")
+@app.put("/items/{item_id}")
 async def update_item(
     item_id: Annotated[int, Path(title="The ID of the Item to get", ge=0, le=1000)],
     q: str | None = None,
