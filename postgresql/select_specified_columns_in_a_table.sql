@@ -1,0 +1,1 @@
+SELECT title, author, price FROM books;
