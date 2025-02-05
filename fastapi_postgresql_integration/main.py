@@ -21,3 +21,9 @@ async def create_user(name: str, email: str, db: AsyncSession = Depends(get_db))
     db.add(new_user)
     await db.commit()
     return {"message": "User created successfully"}
+
+@app.get("/users/")
+async def get_users(db: AsyncSession = Depends(get_db)):
+    result = await db.execute(select(User))
+    users = result.scalars().all()
+    return users
