@@ -18,3 +18,6 @@ async def root():
 @app.post("/users/")
 async def create_user(user: Users, db: AsyncSession = Depends(get_db)):
     new_user = User(name=user.name, email=user.email)
+    db.add(new_user)
+    await db.commit()
+    return {"message": "User created successfully"}
