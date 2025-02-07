@@ -9,4 +9,4 @@ SELECT brand, model FROM cars; -- will select only brand and model column from c
 -- Return All Columns
 -- To select all columns from a table, we make use of * instead of column names
 --Example
-SELECT * FROM cars;
+-- SELECT * FROM cars;
