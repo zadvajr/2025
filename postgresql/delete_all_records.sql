@@ -8,4 +8,4 @@
 -- Delete all records in the cars table:
 DELETE FROM cars;
 
--- Result: DELETE 2 - Which means 3 records are deleted
+-- Result: DELETE 2 - Which means 2 records are deleted
