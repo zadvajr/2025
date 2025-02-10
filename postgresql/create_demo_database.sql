@@ -3277,3 +3277,20 @@ VALUES
   (11077, 77, 2);
 
 -- Result: INSERT 0 2155
+
+-- TESTPRODUCTS
+-- We will also add a table called testproducts for demonstration purposes later in the tutorial.
+
+-- The following SQL statement will create a table named testproducts:
+
+-- CREATE TABLE testproducts
+CREATE TABLE testproducts (
+  testproduct_id SERIAL NOT NULL PRIMARY KEY,
+  product_name VARCHAR(255),
+  category_id INT
+);
+
+-- Result: CREATE TABLE
+-- We will fill the table with 10 dummy products:
+
+-- INSERT INTO testproducts
