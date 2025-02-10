@@ -30,3 +30,17 @@ CREATE TABLE categories (
 );
 
 -- Result: CREATE TABLE
+
+-- The following statement will fill the categories table with content
+INSERT INTO categories (category_name, description)
+VALUES
+  ('Beverages', 'Soft drinks, coffees, teas, beers, and ales'),
+  ('Condiments', 'Sweet and savory sauces, relishes, spreads, and seasonings'),
+  ('Confections', 'Desserts, candies, and sweet breads'),
+  ('Dairy Products', 'Cheeses'),
+  ('Grains/Cereals', 'Breads, crackers, pasta, and cereal'),
+  ('Meat/Poultry', 'Prepared meats'),
+  ('Produce', 'Dried fruit and bean curd'),
+  ('Seafood', 'Seaweed and fish');
+
+-- Result: INSERT 0 8
