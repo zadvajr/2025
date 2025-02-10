@@ -254,3 +254,13 @@ VALUES
   (77, 'Original Frankfurter gr�ne Soae', 2, '12 boxes', 13);
 
 -- Result: INSERT 0 77
+
+-- ORDERS
+-- The following SQL statement will create a table named orders:
+
+-- CREATE TABLE orders
+CREATE TABLE orders (
+  order_id SERIAL NOT NULL PRIMARY KEY,
+  customer_id INT,
+  order_date DATE
+);
