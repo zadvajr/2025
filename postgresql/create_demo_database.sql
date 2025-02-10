@@ -1103,3 +1103,16 @@ VALUES
   (11077, 65, '2023-05-06');
 
 -- Result: INSERT 0 830
+
+-- ORDER_DETAILS
+-- The following SQL statement will create a table named order_details:
+
+-- CREATE TABLE order_details
+CREATE TABLE order_details (
+  order_detail_id SERIAL NOT NULL PRIMARY KEY,
+  order_id INT,
+  product_id INT,
+  quantity INT
+);
+
+Result: CREATE TABLE
