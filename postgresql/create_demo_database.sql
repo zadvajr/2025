@@ -158,3 +158,16 @@ VALUES
   ('Wolski', 'Zbyszek', 'ul. Filtrowa 68', 'Walla', '01-012', 'Poland');
 
 -- Result: INSERT 0 91
+
+-- PRODUCTS
+-- The following SQL statement will create a table named products:
+-- CREATE TABLE products
+CREATE TABLE products (
+  product_id SERIAL NOT NULL PRIMARY KEY,
+  product_name VARCHAR(255),
+  category_id INT,
+  unit VARCHAR(255),
+  price DECIMAL(10, 2)
+);
+
+-- Result: CREATE TABLE
