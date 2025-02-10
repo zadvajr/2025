@@ -44,3 +44,18 @@ VALUES
   ('Seafood', 'Seaweed and fish');
 
 -- Result: INSERT 0 8
+
+-- CUSTOMERS
+-- The following SQL statement will create a table named customers:
+-- CREATE TABLE customers
+CREATE TABLE customers (
+  customer_id SERIAL NOT NULL PRIMARY KEY,
+  customer_name VARCHAR(255),
+  contact_name VARCHAR(255),
+  address VARCHAR(255),
+  city VARCHAR(255),
+  postal_code VARCHAR(255),
+  country VARCHAR(255)
+);
+
+-- Result: CREATE TABLE
