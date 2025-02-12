@@ -3,3 +3,6 @@
 
 -- Example
 SELECT * FROM customers
+
+-- Quotes around numeric fields will not fail,
+-- but it is good practice to always write numeric values without quotes.
