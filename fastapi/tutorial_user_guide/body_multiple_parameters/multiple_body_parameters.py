@@ -33,3 +33,29 @@ async def update_item(item_id: int, item: Item, user: User):
     """Path Operation to Update Item"""
     results = {"item_id": item_id, "item": item, "user": user}
     return results
+
+# In this case, FastAPI will notice that there is more than one body parameter
+# in the function (there are two parameters that are Pydantic models).
+# So, it will then use the parameter names as keys (field names) in the body, and expect a body like
+
+"""
+{
+    "item": {
+        "name": "Foo",
+        "description": "The pretender",
+        "price": 42.0,
+        "tax": 3.2
+    },
+    "user": {
+        "username": "dave",
+        "full_name": "Dave Grohl"
+    }
+}
+"""
+
+# Notice that even though the item was declared the same way as before,
+# it is now expected to be inside of the body with a key item.
+# FastAPI will do the automatic conversion from the request,
+# so that the parameter item receives its specific content and the same for user.
+# It will perform the validation of the compound data,
+# and will document it like that for the OpenAPI schema and automatic docs.
