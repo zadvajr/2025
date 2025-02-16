@@ -8,3 +8,6 @@
 
 SELECT COUNT(customer_id)
 FROM customers;
+
+-- Note: NULL values are not counted
+-- By specifying a WHERE clause, you can e.g. return the number of customers that comes from London:
