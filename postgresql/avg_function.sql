@@ -6,3 +6,5 @@
 
 SELECT AVG(price)
 FROM products;
+
+-- Note: NULL values are ignored.
