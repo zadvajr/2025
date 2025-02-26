@@ -96,3 +96,24 @@ You are now connected to the database!
 In the following sections we will use 'mongosh' to create, read, update, and delete (CRUD) items in your database.
 
 After getting the basics down, we will move on to using MongoDB with other backend technologies like Node.js.
+
+# MongoDB Query API
+
+The MongoDB Query API is the way you will interact with your data.
+
+The MongoDB Query API can be used in two ways:
+
+- CRUD Operations
+- Aggregation Pipelines
+
+# MongoDB Query API Uses
+
+You can use the MongoDB Query API to perform:
+
+- Adhoc queries with mongosh, Compass, VS Code, or a MongoDB driver for the programming language you use.
+- Data transformations using aggregation pipelines.
+- Document join support to combine data from different collections.
+- Graph and geospatial queries.
+- Full-text search.
+- Indexing to improve MongoDB query performance.
+- Time series analysis.
