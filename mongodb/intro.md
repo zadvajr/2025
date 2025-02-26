@@ -62,6 +62,7 @@ We will start by using the MongoDB Shell, mongosh.
 Use the official instructions to install mongosh on your operating system.
 
 To verify that it has been installed properly, open your terminal and type:
+
 ```bash
 mongosh --version
 ```
