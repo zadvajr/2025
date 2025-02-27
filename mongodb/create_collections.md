@@ -14,3 +14,5 @@ You can also create a collection during the insert process.
 We are here assuming object is a valid JavaScript object containing post data:
 
 db.posts.insertOne(Object)
+
+Remember: In MongoDB, a collection is not actually created until it gets content!
