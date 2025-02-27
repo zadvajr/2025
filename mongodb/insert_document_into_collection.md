@@ -17,3 +17,38 @@ db.posts.insertOne({
   tags: ["news", "events"],
   date: Date()
 })
+
+Note: If you try to insert documents into a collection that does not exist, MongoDB will create the collection automatically.
+
+insertMany()
+To insert multiple documents at once, use the insertMany() method.
+
+This method inserts an array of objects into the database.
+
+# Example
+db.posts.insertMany([  
+  {
+    title: "Post Title 2",
+    body: "Body of post.",
+    category: "Event",
+    likes: 2,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 3",
+    body: "Body of post.",
+    category: "Technology",
+    likes: 3,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 4",
+    body: "Body of post.",
+    category: "Event",
+    likes: 4,
+    tags: ["news", "events"],
+    date: Date()
+  }
+])
