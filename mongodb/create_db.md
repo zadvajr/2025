@@ -17,7 +17,10 @@
 # Example
 # Create a new database called "blog":
 
+```shell
 use blog
+```
+This is used to create of switch to a db
 
 # We are now in the blog database.
 
