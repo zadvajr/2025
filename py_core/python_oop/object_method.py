@@ -20,3 +20,6 @@ p1 = Person("Zadva", 36)
 
 # Call the method info() on the object p1
 p1.info() # Output: Zadva is 36 years old
+
+# Note: The self parameter is a reference to the current instance of the class,
+# and is used to access variables that belong to the class.
